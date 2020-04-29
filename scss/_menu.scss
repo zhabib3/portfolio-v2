@@ -36,3 +36,42 @@
     }
   }
 }
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex !important;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: $primary-color;
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut(0.75s);
+
+    &.show {
+      // Slide in from Top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
