@@ -3,7 +3,7 @@ $primary-color-contrast: #2c2c2c;
 // $secondary-color: #ea4c89;
 // $secondary-color: #4AC497;
 // $secondary-color: #6929CC;
-$secondary-color: #4972FF;
+$secondary-color: #4972ff;
 $show-home-image: true;
 $home-image: url(../img/bg.jpg);
 $background-opacity: 0.85;
@@ -32,5 +32,31 @@ $background-opacity: 0.85;
         z-index: -1;
       }
     }
+  }
+}
+
+// Media Query
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
