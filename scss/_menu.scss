@@ -42,7 +42,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -62,16 +61,77 @@
   }
 
   &-nav {
+    flex: 1;
     margin: 0;
     padding: 0;
-    background: $primary-color;
+    background: $primary-color-contrast;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    @include easeOut(0.75s);
+    @include easeOut(0.4s);
 
     &.show {
       // Slide in from Top
       transform: translate3d(0, 0, 0);
     }
+  }
+
+  // Branding Side
+  &-branding {
+    background-color: $primary-color;
+    @include easeOut(0.4s);
+    transform: translate3d(0, 100%, 0);
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 280px;
+      height: 280px;
+      // background: $portrait-image;
+      background: url("../img/portrait.png");
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 10px $secondary-color;
+    }
+  }
+
+  // Nav Items
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut(0.4s);
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+
+  // Nav Links
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-weight: 700;
+    color: #fafafa;
+    text-decoration: none;
+    @include easeOut(0.3s);
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+@for $i from 1 through 4 {
+  .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.1s;
   }
 }

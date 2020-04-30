@@ -1,6 +1,9 @@
 $primary-color: #232323;
 $primary-color-contrast: #2c2c2c;
-$secondary-color: #ea4c89;
+// $secondary-color: #ea4c89;
+// $secondary-color: #4AC497;
+// $secondary-color: #6929CC;
+$secondary-color: #4972FF;
 $show-home-image: true;
 $home-image: url(../img/bg.jpg);
 $background-opacity: 0.85;
@@ -18,13 +21,14 @@ $background-opacity: 0.85;
 
       &:after {
         content: "";
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(3px);
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(147deg, rgba($primary-color, 0.9) 0%, rgba(#1e2a36, 0.9) 70%);
+        // background-image: linear-gradient(147deg, rgba($primary-color, 0.9) 0%, rgba(#1b1b1b, 0.9) 70%);
+        background: rgba($primary-color, 0.75);
         z-index: -1;
       }
     }
