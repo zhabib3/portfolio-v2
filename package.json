@@ -2,13 +2,14 @@
   "name": "portfolio_v2",
   "version": "1.0.0",
   "description": "V2 of Zeeshan's portfolio website",
-  "main": "index.js",
+  "main": "dist/js/main.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --resursive"
   },
   "author": "Zeeshan Habib",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.0",
+    "simple-lightbox": "^2.1.0"
   }
 }
