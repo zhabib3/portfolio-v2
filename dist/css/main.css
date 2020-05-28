@@ -228,6 +228,9 @@ main {
     color: #30475e;
     background-color: #f2a365; }
 
+.project-title {
+  text-align: center; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
