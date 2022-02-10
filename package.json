@@ -9,7 +9,7 @@
   "author": "Zeeshan Habib",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "simple-lightbox": "^2.1.0"
   }
 }
